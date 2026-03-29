@@ -1,0 +1,21 @@
+qdrant:
+  url: "http://localhost:6333"
+  api_key: ""
+  collection_prefix: "helix_"
+
+embeddings:
+  model: "all-MiniLM-L6-v2"
+  dimensions: 384
+  device: "cpu"
+
+memory:
+  world_state_stale_hours: 6
+  interaction_archive_days: 30
+  interaction_prune_days: 90
+  importance_decay_rate: 0.95
+  stale_entity_days: 14
+  context_max_words: 500
+  max_search_results: 10
+
+world_state:
+  method: "programmatic"

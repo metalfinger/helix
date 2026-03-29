@@ -1,0 +1,53 @@
+# Rust
+target/
+*.pdb
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+*.whl
+.venv/
+venv/
+*.so
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Helix runtime
+.ai-status/
+*.log
+server_err.log
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Docker
+docker-compose.override.yml
+
+# Qdrant data (local)
+qdrant_storage/
+
+# Internal scripts/docs (not for public repo)
+docs/video-script*
+video-scripts/

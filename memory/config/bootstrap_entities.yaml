@@ -1,0 +1,136 @@
+entities:
+  # === Work Projects ===
+  - type: project
+    name: "ChaiOS"
+    aliases: ["chai-os", "chai app"]
+    scope: work
+    priority: high
+    context: >
+      Cross-platform mobile app for chai delivery tracking.
+      React Native frontend, Node.js backend, UPI payment integration.
+      Arjun leading architecture decisions.
+    relations:
+      - target_name: "Arjun Mehta"
+        type: team_member
+        detail: "Tech lead"
+    tags: [mobile, active, delivery]
+
+  - type: project
+    name: "Netra"
+    aliases: ["netra-cv", "retail vision"]
+    scope: work
+    priority: critical
+    context: >
+      Computer vision pipeline for retail analytics.
+      YOLOv8 + custom object tracking. Priya leading ML work.
+      Target: 40ms per frame on A100.
+    relations:
+      - target_name: "Priya Sharma"
+        type: team_member
+        detail: "ML engineer"
+    tags: [computer-vision, ml, active]
+
+  # === Personal Projects ===
+  - type: project
+    name: "Jugaad Board"
+    aliases: ["jugaad-board", "keyboard"]
+    scope: personal
+    priority: medium
+    context: >
+      Custom mechanical keyboard firmware. QMK fork with
+      programmable macro layers. PCB design in progress.
+    tags: [hardware, keyboard, side-project]
+
+  - type: project
+    name: "Desi Beats"
+    aliases: ["desi-beats", "tabla-ai"]
+    scope: personal
+    priority: low
+    context: >
+      AI-powered tabla rhythm generator. Diffusion model
+      trained on classical Indian recordings. Early planning.
+    tags: [ai, music, planning]
+
+  # === People ===
+  - type: person
+    name: "Arjun Mehta"
+    scope: work
+    context: >
+      Tech lead on ChaiOS. Drives architecture decisions.
+      Opinionated about microservices. Communicates via Slack.
+    relations:
+      - target_name: "ChaiOS"
+        type: works_on
+    tags: [team, backend]
+
+  - type: person
+    name: "Priya Sharma"
+    scope: work
+    context: >
+      ML engineer on Netra. PhD dropout, deep expertise
+      in transformers and object detection.
+    relations:
+      - target_name: "Netra"
+        type: works_on
+    tags: [team, ml]
+
+  - type: person
+    name: "Vikram Desai"
+    scope: work
+    context: >
+      DevOps engineer. Manages all infrastructure.
+      Known for mass-pinging Slack if anyone pushes to prod on Friday.
+    tags: [team, devops, infra]
+
+  - type: person
+    name: "Neha Krishnan"
+    scope: work
+    context: >
+      Design lead. Figma expert. Refuses to approve
+      anything without 8px grid alignment.
+    tags: [team, design]
+
+  - type: person
+    name: "Rohan Patel"
+    scope: personal
+    context: >
+      College friend, collaborator on Jugaad Board.
+      Brings soldering iron to coffee meetups.
+    relations:
+      - target_name: "Jugaad Board"
+        type: works_on
+    tags: [friend, hardware]
+
+  # === Decisions ===
+  - type: decision
+    name: "Chose Qdrant over Pinecone"
+    scope: work
+    context: >
+      Chose Qdrant for vector storage. Rationale: self-hosted,
+      no vendor lock-in, Docker Compose friendly.
+    tags: [infrastructure, vector-db]
+
+  - type: decision
+    name: "Switched ChaiOS from REST to tRPC"
+    scope: work
+    context: >
+      Arjun proposed tRPC migration. Type safety across the
+      full stack justified the migration effort.
+    tags: [architecture, chaios]
+
+  - type: decision
+    name: "Rejected microservices for Netra"
+    scope: work
+    context: >
+      Models need shared GPU memory. Monolith with clean
+      module boundaries chosen over microservices.
+    tags: [architecture, netra]
+
+  # === Concepts ===
+  - type: concept
+    name: "helix-memory"
+    scope: personal
+    context: >
+      Personal AI memory service. MCP server + CLI providing persistent
+      memory via Qdrant, tool integrations, and workflow automation.
+    tags: [meta, active]
